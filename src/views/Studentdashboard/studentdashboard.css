@@ -1,0 +1,14 @@
+.student-main-dashboard-wrapper {
+    margin: 90px auto 50px;
+}
+.student-main-dashboard-wrapper ul.left-list.list-group li a{
+    font-family: Raleway;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+color: #5C6269;
+}
+a:hover{
+    text-decoration: none;
+}

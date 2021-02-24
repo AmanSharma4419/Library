@@ -1,0 +1,33 @@
+.react-confirm-alert-button-group > button
+{
+	background:#4DA1FF !important;
+}
+.react-confirm-alert-button-group
+{
+	margin-left: 34%;
+}
+.react-confirm-alert-body 
+{
+	text-align: center;
+}
+.staff_p
+{
+width: 69%;
+margin: auto;
+font-size: 11px;	
+}
+.land-box
+{
+	border-bottom: 1px solid #e0e0e0;
+}
+.staff_label
+{
+	font-family:initial !important;
+}
+.media-lib {
+    position: relative;
+    padding: 43px;
+    /* border: 1px solid #cee8f8; */
+    border: 1px solid #e0e0e0; 
+    border-radius: 4px;
+}

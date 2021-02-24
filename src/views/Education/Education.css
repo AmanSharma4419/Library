@@ -1,0 +1,27 @@
+.react-datepicker-wrapper {
+    display: inline !important;
+}
+
+#attendedfrom, #attendedto, #awardedon {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 136.4%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.05em;
+    color: #BDBDBD;
+    mix-blend-mode: normal;
+    border: 1px solid #E9EFF4;
+    border-radius: 4px;
+    height: 34px;
+    width: 100%;
+    padding: 10px;
+}
+.add{
+	margin-left: 25px;
+}
+.counter{
+	margin: 1.7px 0 0 7px;
+	font-size: 28px !important;
+}

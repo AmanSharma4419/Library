@@ -1,0 +1,25 @@
+.react-datepicker-wrapper {
+    display: inline !important;
+}
+
+#dateofbirth {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 136.4%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.05em;
+    color: #BDBDBD;
+    mix-blend-mode: normal;
+    border: 1px solid #E9EFF4;
+    border-radius: 4px;
+    height: 34px;
+    width: 100%;
+    padding: 10px;
+}
+
+.personal-box-inner .form-control.type-bbo { 
+    background-color: #fff !important;
+}
+

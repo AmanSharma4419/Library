@@ -1,0 +1,21 @@
+.score-name .form-control { width: 85px !important; }
+.personal-box-inner .uni-label { font-size: 10px; }
+.scroe-box .uni-label { font-size: 10px; }
+
+
+#examdate, #greexamdate, #gmatexamdate {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 136.4%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.05em;
+    color: #BDBDBD;
+    mix-blend-mode: normal;
+    border: 1px solid #E9EFF4;
+    border-radius: 4px;
+    height: 34px;
+    width: 100%;
+    padding: 10px;
+}

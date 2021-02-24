@@ -1,0 +1,11 @@
+{
+  "baseurl": "https://formeeadmin.bicsglobal.com",
+  "baseurl_loc": "https://formeeadmin.bicsglobal.com/",
+  "baseurl_file": "https://formeeadmin.bicsglobal.com/",
+  "baseurl_file1": "http://localhost/Formee_Admin/public/",
+  "studenturl": "https://formeestudent.bicsglobal.com/",
+  "generalurl": "https://formee.bicsglobal.com/",
+  "generalstart": "https://formee.bicsglobal.com/#/getstarted",
+  "universityurl": "https://formeeuniversity.bicsglobal.com/",
+  "inboxfiles": "https://formeeadmin.bicsglobal.com/Universityinbox"
+}

@@ -1,0 +1,11 @@
+{
+  "baseurl": "http://admin.formeeexpress.com",
+  "baseurl_loc": "http://admin.formeeexpress.com/",
+  "baseurl_file": "http://admin.formeeexpress.com/",
+  "baseurl_file1": "http://admin.formeeexpress.com/public/",
+  "studenturl": "http://student.formeeexpress.com/",
+  "generalurl": "http://formeeexpress.com/",
+  "generalstart": "http://formeeexpress.com/#/getstarted",
+  "universityurl": "http://university.formeeexpress.com/",
+  "inboxfiles": "http://admin.formeeexpress.com/Universityinbox"
+}

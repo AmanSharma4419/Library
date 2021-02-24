@@ -1,0 +1,77 @@
+body{
+    background-color: #fff;
+}
+.student-library-dashboard .slibrary-header h1{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 157.4%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #2B6A6C;
+}
+.student-library-dashboard .slibrary-header p{
+    font-style: normal;
+    font-weight:400;
+    font-size:14px;
+    line-height: 157.4%;
+    letter-spacing: 0.02em;
+    color: #2B6A6C;
+}
+.slibrary-lp{
+    background: #fff;
+    box-shadow: 1px 4px 10px #E5E5E5;
+    border-radius: 8px;
+    padding: 50px;
+}
+.student-library-dashboard .slibrary-dslayout {
+    display: flex;
+    margin: 0 -5px;
+    flex-wrap: wrap;
+}
+.slibrary-dslayout .courseBox {
+    width: calc(25% - 20px);
+    background: #fff;
+    margin: 0 10px 15px;
+    min-height: 148.19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6.73571px;
+    position: relative;
+    box-shadow: 0px 2.24524px 4.49048px rgb(0 42 44 / 20%);
+    border: 0.56131px solid rgba(77, 161, 255, 0.8);
+    opacity: 0.8;
+}
+.slibrary-dslayout .courseBox .courseText {
+    text-align: center;
+    padding: 15px 0px;
+}
+.slibrary-dslayout .courseText h3 {
+    font-size: 22.3201px;
+    margin-bottom: 3px;
+    color: #4DA1FF;
+    font-weight: 600;
+    padding: 15px 15px 0px 15px;
+    word-break: break-all;
+}
+.slibrary-dslayout .courseText span.cousrseStart {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #9a9c9f;
+    letter-spacing: 1px;
+}
+
+
+a:hover{
+    text-decoration: none;
+}
+.student-library-dashboard .slibrary-lp{
+    margin:50px 0px;
+}
+.student-library-dashboard {
+    margin: 50px 0px;
+    display: inline-block;
+    width: 100%;
+}
