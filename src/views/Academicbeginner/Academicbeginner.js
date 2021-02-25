@@ -152,6 +152,17 @@ class academicbeginner extends Component {
       [name]: value
     });
   };
+  onViewClick(mId, sId) {
+    console.log(mId, sId, "in the viewww")
+    axios.post(baseurl + 'insertMaterialView', {
+      material_id: mId,
+      student_id: localStorage.getItem("studentid"),
+      study_material_id: sId,
+    }
+    ).then(res => {
+      console.log(res, "in the res of onviewclick")
+    })
+  }
   componentDidMount() {
     console.log(this.props.match, "in the id")
     axios.get(baseurl + `coursesList?student_id=${localStorage.getItem("studentid")}`,
@@ -481,14 +492,15 @@ class academicbeginner extends Component {
                                               </div>
                                             </div>
                                             <div className="widththirty">
+                                              <button onClick={() => this.handleFavourite(value.id)
+                                              }>Click</button>
                                               <div className="view-btn text-center">
-                                                <button onClick={() => this.handleFavourite(value.id)
-                                                }>Click</button>
-                                                <a className="stm-view-btn" href="#">{value.study_material_view_count != 0 ? "View Again" : "View"}</a>
+                                                <a onClick={() => {
+                                                  this.onViewClick(value.study_material_docs[0].id, value.id)
+                                                }} href={`http://3.20.249.205/public${value.study_material_docs[0].material_path}/${value.study_material_docs[0].material_name}`} className="stm-view-btn" >{value.study_material_view_count != 0 ? "View Again" : "View"}</a>
                                               </div>
                                             </div>
                                           </div>
-
                                         </>
                                       )
                                     }) : this.state.search_result

@@ -65,6 +65,17 @@ class viewtutorial extends Component {
       tutorialsDetails: ""
     };
   }
+  onViewClick(mId) {
+    console.log(mId)
+    axios.post(baseurl + 'insertTutorialView', {
+      material_id: mId,
+      student_id: localStorage.getItem("studentid"),
+      tutorial_id: this.props.match.params.tutorialId,
+    }
+    ).then(res => {
+      console.log(res, "in the res of onviewclick")
+    })
+  }
 
   componentDidMount() {
     axios.post(baseurl + 'tutorialDetail', {
@@ -77,22 +88,25 @@ class viewtutorial extends Component {
     })
   }
   render() {
-    console.log(this.state.classMaterialsVideo, "in the cse")
+
     return (
       <div className="viewtutorial-layout-wrapper">
         <Container>
           <Row>
             <div className="viewtutorial-layout">
               <div className="view-heading-column">
-                <h1><img src={leftarrow} onClick={() => { this.props.history.goBack() }} /><span>Intro to IELTS Advanced</span></h1>
+                <h1><img src={leftarrow} onClick={() => { this.props.history.push(`/Academicbeginner/${this.props.match.params.courseId}`) }} /><span>Intro to IELTS Advanced</span></h1>
               </div>
               <div className="view-layout-box">
                 <div className="view-video-tutorial">
                   <Row>
                     <Col xs="12" sm="12" xl="7" md="7" lg="7" className="pl-0">
                       <div className="view-tutoril-video">
-                        <iframe width="100%" height="315"
-                          src={`http://3.20.249.205/public/${this.state.classMaterialsVideo.material_path}/${this.state.classMaterialsVideo.material_name}`}>
+                        {
+                          this.state.classMaterialsVideo.id ? this.onViewClick(this.state.classMaterialsVideo.id) : ""
+                        }
+                        <iframe width="100%" height="315" id="video_frame"
+                          src={this.state.classMaterialsVideo.material_path ? `http://3.20.249.205/public${this.state.classMaterialsVideo.material_path}/${this.state.classMaterialsVideo.material_name}` : this.state.classMaterialsVideo.material_url} >
                         </iframe>
                       </div>
                     </Col>
@@ -115,19 +129,23 @@ class viewtutorial extends Component {
                         <div className="stm-link">
                           <h2>Study Materials</h2>
                           <div className="link_list">
+
+                            {/* {this.onViewImage()} */}
                             {
                               this.state.classMaterialStudy.length != 0 ? this.state.classMaterialStudy.map((val, index) => {
+                                console.log(val, "in the stydy call")
                                 return (
                                   <>
                                     {
                                       val.original_name ? <div key={index} className="pdf_link">
-                                        {val.original_name}
+                                        <a onClick={() => {
+                                          this.onViewClick(val.id)
+                                        }} href={`http://3.20.249.205/public${val.material_path}/${val.material_name}`} target="blank" >{val.original_name} </a>
                                       </div> : "" || val.material_url ? <ul>
-                                        <li><a href={val.material_url}>{val.material_url}</a></li>
+                                        <li><a onClick={() => { this.onViewClick(val.id) }} href={val.material_url} target="blank">{val.material_url}</a></li>
                                       </ul> : ""
                                     }
                                   </>
-
                                 )
                               }) : "No Data"
                             }
@@ -140,14 +158,15 @@ class viewtutorial extends Component {
                           <div className="link_list">
                             {
                               this.state.classMaterialsAssignment.length != 0 ? this.state.classMaterialsAssignment.map((val, index) => {
-                                console.log(val, "in the assignments")
                                 return (
                                   <>
                                     {
                                       val.original_name ? <div key={index} className="pdf_link">
-                                        {val.original_name}
+                                        <a onClick={() => {
+                                          this.onViewClick(val.id)
+                                        }} href={`http://3.20.249.205/public${val.material_path}/${val.material_name}`} target="blank" >{val.original_name} </a>
                                       </div> : "" || val.material_url ? <ul>
-                                        <li><a href={val.material_url}>{val.material_url}</a></li>
+                                        <li><a onClick={() => { this.onViewClick(val.id) }} href={val.material_url} target="blank" >{val.material_url}</a></li>
                                       </ul> : ""
                                     }
                                   </>
@@ -166,7 +185,7 @@ class viewtutorial extends Component {
             </div>
           </Row>
         </Container>
-      </div>
+      </div >
 
     );
   }
