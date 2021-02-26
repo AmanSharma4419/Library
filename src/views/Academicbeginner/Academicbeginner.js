@@ -177,6 +177,7 @@ class academicbeginner extends Component {
     })
   }
   render() {
+    window.scroll(0, 0)
     return (
       <div className="student-main-dashboard-wrapper">
         <Container>
@@ -303,6 +304,7 @@ class academicbeginner extends Component {
                                   {/* column start */}
                                   {
                                     this.state.tutorial_details && this.state.tutorialsCount != 0 ? this.state.tutorial_details.map((value, index) => {
+                                      console.log(value, "in the value of tutorial view")
                                       return (
                                         <>
                                           <div className="tt-body">
@@ -311,7 +313,7 @@ class academicbeginner extends Component {
                                                 <h2>{value.tutorial_title}</h2>
                                               </div>
                                               <div className="col-wl text-right">
-                                                {value.tutorial_view_status_count === value.class_materials_count ? <a className="completebtn" href="#">Complete</a> : <a className="inprogressbtn" href="#">in progress</a>
+                                                {value.tutorial_view_status_count >= value.class_materials_count ? <a className="completebtn" href="#">Complete</a> : <a className="inprogressbtn" href="#">in progress</a>
                                                 }
                                               </div>
                                             </div>
@@ -497,7 +499,7 @@ class academicbeginner extends Component {
                                               <div className="view-btn text-center">
                                                 <a onClick={() => {
                                                   this.onViewClick(value.study_material_docs[0].id, value.id)
-                                                }} href={`http://3.20.249.205/public${value.study_material_docs[0].material_path}/${value.study_material_docs[0].material_name}`} className="stm-view-btn" >{value.study_material_view_count != 0 ? "View Again" : "View"}</a>
+                                                }} href={`http://3.20.249.205/public${value.study_material_docs[0].material_path}/${value.study_material_docs[0].material_name}`} className="stm-view-btn" target="blank" >{value.study_material_view_count != 0 ? "View Again" : "View"}</a>
                                               </div>
                                             </div>
                                           </div>

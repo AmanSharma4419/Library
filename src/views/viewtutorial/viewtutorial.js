@@ -88,7 +88,7 @@ class viewtutorial extends Component {
     })
   }
   render() {
-
+    window.scroll(0, 0)
     return (
       <div className="viewtutorial-layout-wrapper">
         <Container>
@@ -129,8 +129,6 @@ class viewtutorial extends Component {
                         <div className="stm-link">
                           <h2>Study Materials</h2>
                           <div className="link_list">
-
-                            {/* {this.onViewImage()} */}
                             {
                               this.state.classMaterialStudy.length != 0 ? this.state.classMaterialStudy.map((val, index) => {
                                 console.log(val, "in the stydy call")
